@@ -1,0 +1,7 @@
+<app-basket-item
+*ngFor="let product of state.basket()" [product]="product"
+[count]="product.count"
+(addToBasket)="handleAddToBasket($event)"
+(subtractFromBasket)="handleSubtractFromBasket($event)"
+></app-basket-item>
+<button class="checkout-btn" *ngIf="state.basket().length > 0" routerLink="checkout">Checkout</button>

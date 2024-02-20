@@ -1,0 +1,14 @@
+<header>
+  <h1 routerLink="/shop">Online shop!</h1>
+  <app-header-basket [class.shown]="showBasket" (click)="showBasket = !showBasket"></app-header-basket>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+  <div class="basket" *ngIf="showBasket">
+    <app-basket></app-basket>
+  </div>
+</main>
+
+
+<footer>copyright Randstad Digital Germany AG</footer>

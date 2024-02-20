@@ -1,0 +1,10 @@
+<input
+  placeholder="Start typing to search products..."
+  class="searchInput" [(ngModel)]="currentSearchTerm" />
+<ul>
+  <app-product-item
+    *ngFor="let product of state.allProducts() | searchProduct: currentSearchTerm"
+    [product]="product"
+    (addToBasket)="handleAddToBasket($event)"
+  ></app-product-item>
+</ul>

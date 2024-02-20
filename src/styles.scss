@@ -1,1 +1,228 @@
-/* You can add global styles to this file, and also import other style files */
+
+body {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+app-basket {
+  .checkout-btn {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+  }
+}
+
+app-basket-item {
+  .basket-item {
+    display: grid;
+    grid-template-columns: 50px 1fr 127px;
+    max-width: 375px;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    font-size: 12px;
+    gap: 15px;
+    border: none;
+    border-bottom: 2px dashed #a5c1ae;
+    padding-top: 22px;
+    color: white;
+
+    .plus-minus-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .count {
+    font-size: 33px;
+  }
+}
+
+app-product-item {
+  .listing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 400px;
+    padding: 5px;
+    border: 3px solid #9e9e9e36;
+
+    .title {
+      text-align: left;
+      width: 75%;
+
+      h3 {
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+app-products-list {
+  .searchInput {
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    background-color: white;
+    color: darkgrey;
+    font-size: 22px;
+    padding: 8px;
+    width: -webkit-fill-available;
+  }
+
+
+  ul {
+    max-height: calc(100vh - 205px);
+    overflow: scroll;
+  }
+}
+
+app-product-detail{
+  main {
+    height: calc(100vh - 165px);
+    overflow: scroll;
+  }
+  .back {
+    font-size: 50px;
+    background-color: black;
+    color: white;
+    padding: 0;
+    margin-top: -11px;
+    cursor: pointer;
+  }
+}
+
+app-shop-home{
+    display: grid;
+    grid-template-rows: 90px 1fr 19px;
+    align-items: start;
+    height: 100vh;
+
+  header {
+    background-color: black;
+    color: white;
+    display: flex;
+    width: -webkit-fill-available;
+    height: 50px;
+    padding: 20px;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  app-header-basket {
+    padding: 35px;
+
+    &.shown {
+      background-color: #004452;
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+
+    .basket {
+      position: fixed;
+      top: 95px;
+      right: 8px;
+      padding-top: 15px;
+      background-color: #004452;
+      box-shadow: 0 10px 8px 0 lightgray;
+    }
+  }
+
+
+  footer {
+    background-color: #004452;
+    color: #cdff9a;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+app-checkout-home {
+  .payment {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    margin: auto;
+    width: 300px;
+
+    input {
+      border: 1px solid #cbcbcb;
+      border-radius: 5px;
+      background-color: white;
+      color: darkgrey;
+      font-size: 22px;
+      padding: 8px;
+      width: -webkit-fill-available;
+    }
+
+    .zip-city {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+      width: 300px;
+
+      input {
+        width: 82%;
+      }
+    }
+
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      button {
+        background-color: #ddd;
+        border: none;
+        color: black;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 16px;
+      }
+    }
+
+  }
+}
+.fancy-button {
+  background-color: rgba(167, 255, 66, 0.5803921569);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  border: none;
+  box-shadow: 0 0 2px 0 grey;
+  padding: 0;
+  text-align: center;
+  line-height: 0;
+  cursor: pointer;
+}
+
+ .material-symbols-outlined {
+   font-variation-settings:
+     'FILL' 0,
+     'wght' 400,
+     'GRAD' 0,
+     'opsz' 24
+ }

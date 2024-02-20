@@ -1,0 +1,14 @@
+<h1>Parent Component</h1>
+
+<label>Non Signal Input Changer</label>
+<input type="text" (keyup)="handleNonSignalInput($event)">
+
+<label>Signal Input Changer</label>
+<input type="text" (keyup)="handleSignalInput($event)">
+
+
+<hr>
+<app-child-signal-non-signal
+[nonSignalObject]="someObject"
+[signalObject]="someSignalObject"
+></app-child-signal-non-signal>
